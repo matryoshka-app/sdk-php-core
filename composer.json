@@ -4,7 +4,7 @@
   "description": "SDK core on php. Can be used to embed in your favorite framework.",
   "keywords": ["matryoshka","php","sdk"],
   "homepage": "https://matryoshka.app/",
-  "license": "Apache 2.0",
+  "license": "MIT",
   "authors": [
     {
       "name": "Roman Chizhikov",
