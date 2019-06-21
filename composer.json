@@ -1,0 +1,15 @@
+{
+  "name": "matryoshka-app/sdk-php-core",
+  "type": "library",
+  "description": "SDK core on php. Can be used to embed in your favorite framework.",
+  "keywords": ["matryoshka","php","sdk"],
+  "homepage": "https://matryoshka.app/",
+  "license": "Apache 2.0",
+  "authors": [
+    {
+      "name": "Roman Chizhikov",
+      "email": "chizhikov.ok@gmail.com",
+      "role": "Developer"
+    }
+  ]
+}
