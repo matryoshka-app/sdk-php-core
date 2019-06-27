@@ -65,10 +65,12 @@ class HandlerManager {
      * @throws \Exception
      */
     public function getByURI(string $uri) {
-
+        if (empty($uri)) {
+            $uri = '/';
+        }
         $handlers = $this->getHandlers();
         if (!isset($handlers[$uri])) {
-            throw new \Exception("handler for '{$uri}'' not registered");
+            throw new \Exception("handler for '{$uri}' not registered");
         }
         $class = $handlers[$uri];
         return $class;

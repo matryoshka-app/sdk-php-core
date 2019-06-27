@@ -19,7 +19,7 @@ class MatryoshkaTest  extends TestCase {
         ];
         $matryoshka = new Matryoshka($request);
         $matryoshka->getHandlerManager()->addHandler(MockHandler::class);
-        var_dump($matryoshka->start());exit;
-//        $this->assertArrayHasKey('type', $matryoshka->start());
+//        var_dump($matryoshka->start());exit;
+        $this->assertArrayHasKey('type', $matryoshka->start());
     }
 }

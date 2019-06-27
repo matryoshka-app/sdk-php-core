@@ -3,6 +3,7 @@
 namespace Matryoshka\Handlers;
 
 use \Matryoshka\Request\Request;
+use Matryoshka\Response\Response;
 use Matryoshka\Response\Types\ResponseFull;
 
 /**
@@ -45,6 +46,14 @@ abstract class Handler {
     public function getResponse() {
 
        return $this->response;
+    }
+
+
+    /**
+     *
+     */
+    public function setResponse(Response $response) {
+        return $this->response = $response;
     }
 
     /**
