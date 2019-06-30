@@ -19,22 +19,20 @@ class Input {
      * @param $data
      */
     public function __construct($data) {
-        foreach ($data as $input) {
-            $this->data[$input['key']] = $input;
+
+        foreach ($data as $key => $input) {
+            $this->data[$key] = $input;
         }
     }
 
     /**
      * Return raw array of the input
      * @param $key
-     * @return array
+     * @return string
      * @throws \Exception
      */
     public function getRaw($key) {
-        if (!isset($this[$key])) {
-            throw new \Exception("key $key not exists");
-        }
-        return $this[$key];
+        return $this->data[$key] ?? null;
     }
 
     /**
@@ -45,8 +43,7 @@ class Input {
      * @throws \Exception
      */
     public function value($key) {
-        $input = $this->getRaw($key);
-        return $input['value'];
+        return $this->getRaw($key);
     }
 
 
@@ -55,8 +52,13 @@ class Input {
      * @return string
      * @throws \Exception
      */
-    public function __get($name)
+    public function __get($key)
     {
-        return $this->value($name);
+        return $this->value($key);
+    }
+
+    public function __isset($name)
+    {
+        return (bool)$this->value($key);
     }
 }

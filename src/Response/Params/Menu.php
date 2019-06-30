@@ -15,6 +15,7 @@ class Menu {
     public function toArray() {
         $res = [];
         foreach ($this->items as $item) {
+            /** @var MenuItem $item  */
             $res[] = $item->toArray();
         }
 

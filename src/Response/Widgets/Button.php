@@ -9,25 +9,23 @@ use Matryoshka\Response\Params\TextStyle;
  * Doc: https://matryoshka.app/docs/5
  * @package Matryoshka\Response\Widgets
  */
-class Text extends Widget {
+class Button extends Widget {
     /** @var string Text */
-    public $text;
-    public $type = 'text';
+    public $title;
+    public $type = 'button';
     public $uri;
     public $progressbar = false;
 
-
     public $style;
 
-    public function __construct($text) {
-        $this->text = $text;
+    public function __construct() {
         $this->style = new TextStyle();
     }
 
     public function toArray() {
         return [
             'type' => $this->type,
-            'text' => $this->text,
+            'title' => $this->title,
             'payload' => $this->uri,
             'progressbar' => $this->progressbar,
             'style' => $this->style->toArray(),

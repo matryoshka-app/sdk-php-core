@@ -10,6 +10,6 @@ use Matryoshka\Response\Params\TextStyle;
  * @package Matryoshka\Response\Widgets
  */
 abstract class Widget {
-
+    public $type = null;
     abstract function toArray();
 }

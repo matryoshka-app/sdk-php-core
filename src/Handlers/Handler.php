@@ -48,6 +48,14 @@ abstract class Handler {
        return $this->response;
     }
 
+    /**
+     *
+     */
+    public function getRequest() {
+
+       return $this->request;
+    }
+
 
     /**
      *

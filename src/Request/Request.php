@@ -27,7 +27,8 @@ class Request {
             throw new \Exception('request is invalid');
         }
 
-        $this->input = new Input($request['input']);
+        $input = json_decode($request['input'], true);
+        $this->input = new Input($input);
         $this->user = new User($request['user']['id'], $request['user']['name']);
         $this->payload = $request['payload'] ?? '';
         $this->parseURI();
