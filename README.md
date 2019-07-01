@@ -22,12 +22,12 @@ You should set uri and handler for you handler. You can use uri system for easy 
 example:
 ```php
 class MockHandler extends Handler {
+
     static function getURI() {
         return 'catalog/full_item';
     }
 
     function handler() {
-    
 
         $menuItem = new MenuItem();                     // create drawer menu item 
         $menuItem->title = new Text('My menu Item');    // set title
