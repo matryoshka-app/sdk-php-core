@@ -2,7 +2,7 @@
 SDK core on php. Can be used to embed in your favorite framework.
 
 
-### Start
+### Install
 
 `composer require matryoshka-app/sdk-php-core`
 
@@ -23,16 +23,32 @@ example:
 ```php
 class MockHandler extends Handler {
     static function getURI() {
-        return 'test/1';
+        return 'catalog/full_item';
     }
 
     function handler() {
-        $menuItem = new MenuItem();
-        $menuItem->title = new Text('test');
+    
+
+        $menuItem = new MenuItem();                     // create drawer menu item 
+        $menuItem->title = new Text('My menu Item');    // set title
         
-        $response = $this->getResponse();
-        $response->menu->add($menuItem);
-        $response->addWidget(new Text('testim'));
+        $response = $this->getResponse();               // get response
+        $response->menu->add($menuItem);                // add menu item to response
+
+        $query = $this->getRequest()->query;            
+        $response->addWidget(new Text('Full page for id '.$query['id'])); // add widget to response without settings. it example a bad code.
+        
+        // you can use getURI() for build uri
+        $button = new Button();                         // create button
+        $button->title = 'Item 2';                      // set title
+        $button->uri = self::getURI().'?id=2';          // set uri (payload)
+        $response->addWidget($button);                  // add button to response
+        
+        // or hardcode
+        $button = new Button();
+        $button->title = 'Item 3';
+        $button->uri = 'catalog/full_item?id=3';
+        $response->addWidget($button);
     }
 }
 ```
