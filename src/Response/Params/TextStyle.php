@@ -37,6 +37,7 @@ class TextStyle {
             'bold' => $this->bold,
             'italic' => $this->italic,
             'size' => $this->size,
+            'center' => $this->center,
         ];
     }
 

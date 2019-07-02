@@ -16,5 +16,11 @@ class Style {
      */
     public $background;
 
+    public function toArray() {
+    	return [
+    		'color' => $this->color,
+		    'background' => $this->background,
+	    ];
+    }
 
 }

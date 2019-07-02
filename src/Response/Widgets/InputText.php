@@ -26,7 +26,7 @@ class InputText extends Widget {
         return [
             'type' => $this->type,
             'label' => $this->label,
-            'label' => $this->hint,
+            'hint' => $this->hint,
             'value' => (string)$this->value,
             'key' => $this->key,
         ];
