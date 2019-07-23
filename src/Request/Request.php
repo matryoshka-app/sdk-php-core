@@ -29,7 +29,7 @@ class Request {
 
         $input = json_decode($request['input'], true);
         $this->input = new Input($input);
-        $this->user = new User($request['user']['id'], $request['user']['name']);
+        $this->user = new User($request['user']['id'], $request['user']['name'], $request['user']['lang']);
         $this->payload = $request['payload'] ?? '';
         $this->parseURI();
     }

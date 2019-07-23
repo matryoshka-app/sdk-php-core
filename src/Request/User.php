@@ -19,15 +19,22 @@ class User {
      * @var int
      */
     public $id;
+    
+    /**
+     * User lang
+     * @var int
+     */
+    public $lang;
 
     /**
      * User constructor.
      * @param int $id
      * @param string $name
      */
-    public function __construct($id, $name) {
-        $this->name = $name;
-        $this->id   = $id;
+    public function __construct($id, $name, $lang) {
+        $this->name     = $name;
+        $this->id       = $id;
+        $this->lang     = $lang;
     }
 
 }
