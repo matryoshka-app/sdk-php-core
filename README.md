@@ -1,4 +1,5 @@
 # sdk-php-core
+
 SDK core on php. Can be used to embed in your favorite framework.
 
 
@@ -52,3 +53,8 @@ URI - contained payload parameter according http uri interface.
 * You can use url and query string `/users/profile?id=2&full_profile=true` after '?' 
 * You can pass for you handler as http request. You can get it on you handler `$this->getRequest()->uri` and array query string `$this->getRequest()->query`. 
 * Or you can use full payload content on `$this->getRequest()->payload`.
+
+### Links
+[Matryoshka API Docs](http://matryoshka.app/docs/)
+
+[Example framework on php using this sdk](https://github.com/matryoshka-app/framework-php)
