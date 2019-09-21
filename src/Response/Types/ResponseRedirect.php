@@ -13,10 +13,10 @@ use Matryoshka\Response\Widgets\Widget;
  */
 
 class ResponseRedirect extends Response {
-    protected string $type = 'redirect';
-    public string $uri = '';
-    public string $notify = null;
-    
+    protected  $type = 'redirect';
+    public  $uri = '';
+    public  $notify = null;
+
 
     public function toArray() {
         $res = parent::toArray();
