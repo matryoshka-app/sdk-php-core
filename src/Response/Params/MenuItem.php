@@ -9,7 +9,7 @@ class MenuItem {
      * @var string HEX Color etc #000000
      */
     public $title;
-    public $payload;
+    public $uri;
     public $progressbar = false;
 
     public function __construct(Text $title = null) {
@@ -18,8 +18,8 @@ class MenuItem {
 
     public function toArray() {
         return [
-            'title' => $this->title->toArray() ,
-            'payload' => $this->payload,
+            'title' => is_string($this->title) ? $this->title : $this->title->toArray() ,
+            'payload' => $this->uri,
             'progressbar' => $this->progressbar,
         ];
     }

@@ -13,8 +13,6 @@ class Text extends Widget {
     /** @var string Text */
     public $text;
     public $type = 'text';
-    public $uri;
-    public $progressbar = false;
 
 
     public $style;
@@ -28,8 +26,6 @@ class Text extends Widget {
         return [
             'type' => $this->type,
             'text' => $this->text,
-            'payload' => $this->uri,
-            'progressbar' => $this->progressbar,
             'style' => $this->style->toArray(),
         ];
     }

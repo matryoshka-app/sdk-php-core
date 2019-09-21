@@ -2,7 +2,7 @@
 
 namespace Matryoshka\Response\Widgets;
 
-use Matryoshka\Response\Params\TextStyle;
+use Matryoshka\Response\Params\Style;
 
 /**
  * Text widget
@@ -19,7 +19,7 @@ class Button extends Widget {
     public $style;
 
     public function __construct() {
-        $this->style = new TextStyle();
+        $this->style = new Style();
     }
 
     public function toArray() {

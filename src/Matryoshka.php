@@ -37,6 +37,7 @@ class Matryoshka {
      */
     public function start() {
         $class = $this->getHandlerManager()->getByURI($this->request->uri);
+
         /** @var Handler $handler */
         $handler = new $class($this->request);
         $handler->handler();
