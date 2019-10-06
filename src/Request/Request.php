@@ -42,7 +42,7 @@ class Request {
     public function parseURI() {
         $res = parse_url($this->payload);
         $uri = $res['path'] ?? null;
-        $queryString = $res['query'] ?? $res['fragment'];
+        $queryString = $res['query'] ?? $res['fragment'] ?? '';
         \parse_str($queryString, $query);
         $this->query = $query;
         $this->uri = $uri;
