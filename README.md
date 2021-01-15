@@ -1,6 +1,6 @@
 # sdk-php-core
 
-SDK core on php. Can be used to embed in your favorite framework.
+SDK core on php for create backend side for your matreshka app. Can be used to embed in your favorite framework.
 
 
 ### Start
